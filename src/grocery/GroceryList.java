@@ -34,7 +34,7 @@ public class GroceryList {
                 String itemCategory;
                 do {
                     System.out.println("Please choose a category:");
-                    System.out.println("★ " + String.join(" ★ ", categoriesList) + " ★");
+                    System.out.println("～♡～ " + String.join(" ～♡～ ", categoriesList) + " ～♡～");
                     itemCategory = input.getString();
                     if (!categories.containsKey(itemCategory)) {
                         System.err.println("That's not a category!");
@@ -51,17 +51,14 @@ public class GroceryList {
                 cont=false;
             }
         }while(cont);
-        System.out.println("\n～*～♡～*～♥～*～♡～*～♥～*～♡～*～♥～*～♡～*～");
         for(String category : categoriesList){
             if(categories.get(category).size()>0) {
-                System.out.println(category);
-                System.out.println("～");
-
+                System.out.println(("♡"+category+"♡"));
                 Collections.sort(categories.get(category),(GroceryItem o1, GroceryItem o2) ->o1.name.compareTo(o2.name));
                 for(GroceryItem item : categories.get(category)){
                     System.out.println("♥ " + item.name + " ♥ "+ item.count);
                 }
-                System.out.println("\n～*～♡～*～♥～*～♡～*～♥～*～♡～*～♥～*～♡～*～");
+                System.out.println("\n～*～♡～*～♥～*～♡～*～♥～*～♡～*～♥～*～♡～*～\n");
             }
         }
 
@@ -70,9 +67,3 @@ public class GroceryList {
 
 
 }
-
-
-
-
-
-//        System.out.println("～*～♡～*～♥～*～♡～*～♥～*～♡～*～♥～*～♡～*～");
