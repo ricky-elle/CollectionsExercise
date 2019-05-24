@@ -26,7 +26,10 @@ public class GroceryList {
 
         System.out.println("Would you like to create a grocery list?");
 
-        if (!input.yesNo())return;
+        if (!input.yesNo()){
+            System.out.println("(-(-_(-_-)_-)-)");
+            return;
+        }
         boolean cont=true;
         do {
             System.out.println("Would you like to enter new item?");
