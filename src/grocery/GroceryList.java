@@ -22,6 +22,21 @@ public class GroceryList {
         categories.put("Drinks",new ArrayList<>());
         categories.put("Household Items",new ArrayList<>());
 
+
+        categories.get("Dairy").add(new GroceryItem("Goats Milk", 666));
+        categories.get("Dairy").add(new GroceryItem("Cheese", 420));
+        categories.get("Dairy").add(new GroceryItem("Yogurt", 999));
+
+        categories.get("Breakfast").add(new GroceryItem("Cap'n Crunch", 20));
+        categories.get("Breakfast").add(new GroceryItem("Tacos", 20));
+
+        categories.get("Snacks").add(new GroceryItem("Goldfish", 5000));
+
+        categories.get("Drinks").add(new GroceryItem("Cider", 99));
+
+        categories.get("Frozen").add(new GroceryItem("Pizza", 99));
+
+
         List<String> categoriesList = new ArrayList<String>(categories.keySet());
 
         System.out.println("Would you like to create a grocery list?");
